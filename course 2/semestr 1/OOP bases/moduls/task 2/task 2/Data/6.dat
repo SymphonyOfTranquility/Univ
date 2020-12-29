@@ -1,0 +1,20 @@
+list
+  3
+	list
+	  2
+		string
+                  QWert213
+        	negative_number
+	          -10
+
+	else
+
+	pair<a,b>
+        	positive_number
+                  5
+       		list
+                  2
+                	string
+                          ASDfgte34
+                	negative_number
+                          -5
