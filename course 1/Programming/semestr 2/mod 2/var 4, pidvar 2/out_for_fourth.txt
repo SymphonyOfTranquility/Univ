@@ -1,0 +1,104 @@
+KEYS: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+vertex: 1
+Interval #1:  begin: -64 end: 64 step: 6
+
+vertex: 2
+Interval #1:  begin: -64 end: 64 step: 8
+
+vertex: 3
+Interval #1:  begin: -76 end: 76 step: 6
+
+vertex: 4
+Interval #1:  begin: -80 end: 80 step: 8
+
+vertex: 5
+Interval #1:  begin: -88 end: 88 step: 6
+
+vertex: 6
+Interval #1:  begin: -88 end: 88 step: 4
+
+vertex: 7
+Interval #1:  begin: -96 end: 96 step: 4
+
+vertex: 8
+Interval #1:  begin: -92 end: 92 step: 2
+
+vertex: 9
+Interval #1:  begin: -85 end: -73 step: 4
+Interval #2:  begin: -97 end: 88 step: 5
+Interval #3:  begin: -44 end: -18 step: 2
+
+vertex: 10
+Interval #1:  begin: -78 end: 37 step: 5
+
+vertex: 11
+Interval #1:  begin: -22 end: 86 step: 4
+Interval #2:  begin: -12 end: 87 step: 3
+Interval #3:  begin: -28 end: -18 step: 2
+
+vertex: 12
+Interval #1:  begin: -97 end: -2 step: 5
+Interval #2:  begin: 12 end: 32 step: 5
+
+vertex: 13
+Interval #1:  begin: -23 end: 46 step: 3
+
+vertex: 14
+Interval #1:  begin: -100 end: 100 step: 2
+
+vertex: 15
+Interval #1:  begin: -48 end: -39 step: 3
+Interval #2:  begin: 36 end: 90 step: 3
+Interval #3:  begin: 28 end: 94 step: 3
+
+vertex: 16
+Interval #1:  begin: -10 end: 59 step: 3
+Interval #2:  begin: -100 end: -20 step: 5
+
+vertex: 17
+Interval #1:  begin: -27 end: 27 step: 6
+Interval #2:  begin: -91 end: 61 step: 4
+Interval #3:  begin: 43 end: 83 step: 4
+
+vertex: 18
+Interval #1:  begin: -70 end: 80 step: 6
+Interval #2:  begin: 17 end: 53 step: 4
+Interval #3:  begin: -40 end: 68 step: 6
+
+vertex: 19
+Interval #1:  begin: -28 end: 44 step: 3
+
+vertex: 20
+Interval #1:  begin: -23 end: 82 step: 5
+Interval #2:  begin: -57 end: 83 step: 4
+
+vertex: 21
+Interval #1:  begin: -14 end: 76 step: 6
+Interval #2:  begin: -95 end: 1 step: 6
+Interval #3:  begin: -98 end: -73 step: 5
+
+vertex: 22
+Interval #1:  begin: -100 end: 100 step: 1
+
+1 :  left : 2,  right : 
+2 :  left : 3,  right : 
+3 :  left : 4,  right : 
+4 :  left : 5,  right : 
+5 :  left : 6,  right : 
+6 :  left : 7,  right : 
+7 :  left : 8,  right : 
+8 :  left : 9,  right : 
+9 :  left : 10,  right : 
+10 :  left : 11,  right : 
+11 :  left : 12,  right : 
+12 :  left : 13,  right : 
+13 :  left : 14,  right : 
+14 :  left : 15,  right : 
+15 :  left : 16,  right : 
+16 :  left : 17,  right : 
+17 :  left : 18,  right : 
+18 :  left : 19,  right : 
+19 :  left : 20,  right : 
+20 :  left : 21,  right : 
+21 :  left : 22,  right : 
+22 :  left :  right : 
