@@ -1,2 +1,3 @@
-### 2 course
-##### 2 semestr stuff
+# 2 course
+- OOP bases
+- Algorithm and complexity

@@ -1,2 +1,2 @@
-### 2 course
-##### 1 semestr stuff
+# 2 course
+OOP bases
