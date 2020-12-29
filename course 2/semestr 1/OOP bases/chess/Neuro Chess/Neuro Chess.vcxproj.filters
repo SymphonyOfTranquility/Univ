@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Window Work">
+      <UniqueIdentifier>{099dfe4b-2564-4578-b019-a0869aa82d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Window Work">
+      <UniqueIdentifier>{2a92206f-ffaf-435d-a17f-c0d6524dc638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Board">
+      <UniqueIdentifier>{9ad9d8c1-1817-4ddf-9659-843ec54bfdbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Board">
+      <UniqueIdentifier>{10d743db-0fc3-42b1-bbca-6aa2aefd6a8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Board\View">
+      <UniqueIdentifier>{2e9d9609-e5a3-46e7-82b6-bd4b567da9c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Board\View">
+      <UniqueIdentifier>{107dfa01-e127-4675-a361-543434d4ed01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CenterOfWork.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkWithWindow.cpp">
+      <Filter>Исходные файлы\Window Work</Filter>
+    </ClCompile>
+    <ClCompile Include="SubWindowView.cpp">
+      <Filter>Исходные файлы\Window Work</Filter>
+    </ClCompile>
+    <ClCompile Include="SubWindow.cpp">
+      <Filter>Исходные файлы\Window Work</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Исходные файлы\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="Figure.cpp">
+      <Filter>Исходные файлы\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardView.cpp">
+      <Filter>Исходные файлы\Board\View</Filter>
+    </ClCompile>
+    <ClCompile Include="FigureView.cpp">
+      <Filter>Исходные файлы\Board\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Исходные файлы\Window Work</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonView.cpp">
+      <Filter>Исходные файлы\Window Work</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoGame.cpp">
+      <Filter>Исходные файлы\Board</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CenterOfWork.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkWithWindow.h">
+      <Filter>Файлы заголовков\Window Work</Filter>
+    </ClInclude>
+    <ClInclude Include="SubWindowView.h">
+      <Filter>Файлы заголовков\Window Work</Filter>
+    </ClInclude>
+    <ClInclude Include="SubWindow.h">
+      <Filter>Файлы заголовков\Window Work</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Файлы заголовков\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Файлы заголовков\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="BoardView.h">
+      <Filter>Файлы заголовков\Board\View</Filter>
+    </ClInclude>
+    <ClInclude Include="FigureView.h">
+      <Filter>Файлы заголовков\Board\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Файлы заголовков\Window Work</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonView.h">
+      <Filter>Файлы заголовков\Window Work</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoGame.h">
+      <Filter>Файлы заголовков\Board</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

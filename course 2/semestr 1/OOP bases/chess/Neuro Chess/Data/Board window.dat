@@ -1,0 +1,51 @@
+Chess
+562 562
+
+5
+1
+Data\board.png
+Board
+0 0
+562 562
+Data\Board buttons.dat
+Data\Board buttons view.dat
+0 0 0 0
+0 0 0 0
+
+0
+Update
+206 139  
+150 284
+Data\Update buttons.dat
+Data\Update buttons view.dat
+101 67 33 255
+57 38 19 255
+
+0
+Settings
+180 120  
+196 322
+Data\Settings buttons.dat
+Data\Settings buttons view.dat
+101 67 33 255
+57 38 19 255
+
+0
+endOfGame
+220 200
+122 162
+Data\endOfGame buttons.dat
+Data\endOfGame buttons view.dat
+101 67 33 255
+57 38 19 255
+
+1
+Data\figures for change.png
+figures for change
+249 153 
+64 256
+Data\figures buttons.dat
+Data\figures buttons view.dat
+0 0 0 0
+57 38 19 255
+
