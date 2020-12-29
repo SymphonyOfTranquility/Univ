@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 3.0</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body style = "margin: 0px">
+ <div style = "min-height:100%; position: relative;">
+  <div class = "header">
+    <div class = "block980px">
+      <div class = "logoClass">
+        <div class = "obrLogo"><img src = "img/logo.png" class = "logoImg" alt = "logo"></div>
+        <div class = "logoName">Cloudlet cats</div>
+      </div>
+      <div class = "feedBack">
+        <div>+123-45-678-90-12</div>
+        <div><input type = "button" value = "Feedback" id = "feedbackButton" onclick = "fadeIn()"></div>
+      </div>
+    </div>
+  </div>
+  <div class = "main_menu">
+    <div class = "block980px">
+      <ul class = "navig">
+        <li class = "li_menu"><a href = "../main.html">Main</a></li>
+        <li class = "li_menu"><a href = "catalog.html">Catalog</a></li>
+        <li class = "li_menu"><a href = "top.html">Top</a></li>      
+      </ul>
+    </div>
+  </div>
+  <div class = "block980px">
+    <div class = "slider">
+      <div class = "slide1"></div>
+      <div class = "slide2"></div>
+      <div class = "slide3"></div>
+      <div class = "slide4"></div>
+    </div>
+  </div>
+  <div class = "block980px">
+    <div class = "content"> 
+      <div class = "leftblock">
+        <ul class = "menu_content">
+          <li class = "li_leftcontent">Persian cats</li>
+          <li class = "li_leftcontent">British Longhair cats</li>
+          <li class = "li_leftcontent">Munchkin cats</li>
+          <li class = "li_leftcontent">Norwegian Forest cats</li>
+          <li class = "li_leftcontent">Ocicats</li>
+        </ul>
+      </div>
+      <div class = "centerblock">
+        <div class = "block_with_cat_price">
+          <div class = "imgblock"><img src = "img/sleepy cat.jpg" alt = "sleepy cat"></div>
+          <div class = "infoTextBl">Sleepy cat</div>
+          <div class = "price">95$</div>
+        </div>
+        <div class = "block_with_cat_price">
+          <div class = "imgblock"><img src = "img/kitten in the cap.jpg" alt = "kitten in the cap"></div>
+          <div class = "infoTextBl">Kitten in the cap</div>
+          <div class = "price">110$</div>
+        </div>
+        <div class = "block_with_cat_price">
+          <div class = "imgblock"><img src = "img/black-white cat.jpg" alt = "black-white cat"></div>
+          <div class = "infoTextBl">Black-white cat</div>
+          <div class = "price">120$</div>
+        </div>
+        <div class = "block_with_cat_price">
+          <div class = "imgblock"><img src = "img/clever cat.jpg" alt = "clever cat"></div>
+          <div class = "infoTextBl">clever cat</div>
+          <div class = "price">200$</div>
+        </div>
+        <div class = "block_with_cat_price">
+          <div class = "imgblock"><img src = "img/kitten behind the door.jpg" alt = "kitten behind the door"></div>
+          <div class = "infoTextBl">Kitten behind the door</div>
+          <div class = "price">100$</div>
+        </div>
+        <div class = "block_with_cat_price">
+          <div class = "imgblock"><img src = "img/new year cat.jpg" alt = "new year cat"></div>
+          <div class = "infoTextBl">New year cat</div>
+          <div class = "price">140$</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "footer">
+    <div class = "block980px">
+      <ul class = "footerUl">
+        <li style = "float: left">
+          <div>@2019 Cloudlet cats company</div>
+          <div>info@cloudlet.cat</div>
+        </li>
+        <li>
+          <ul class = "footerMenuUl">
+            <li class = "li_footermenu"><a href = "../main.html">Main</a></li>
+            <li class = "li_footermenu"><a href = "catalog.html">Catalog</a></li>
+            <li class = "li_footermenu"><a href = "top.html">Top</a></li>  
+          </ul>
+        </li>
+        <li style = "float: right; text-align: left">
+          <div>Created by:</div>
+          <div>Mysechko Artemiy K-28</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id = "feedback">
+    <form action = "#">
+      <div class = "feedHead"><h1>Feedback</h1></div>
+      <div class = "feedHead">Name</div>
+      <div><input type = "text" 
+                  class = "feedInp" 
+                  id = "username" 
+                  name = "username" 
+                  pattern = "[A-Za-z]{1,15}" 
+                  placeholder = "John"
+                  required>
+      </div>
+      <div class = "feedHead">Phone</div>
+      <div><input class = "feedInp" 
+                  type = "tel" 
+                  id = "phone" 
+                  name = "phone"
+                  pattern = "[+][0-9]{3}[(][0-9]{2}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  placeholder = "+123(45)678-90-12"
+                  required>
+      </div>
+      <div class = "feedHead">Email</div>
+      <div><input class = "feedInp" 
+                  type = "email" 
+                  id = "email"
+                  pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                  placeholder = "post@example.com"
+                  required>
+      </div>
+      <div class = "feedHead">Message text</div>
+      <div><textarea class = "feedInpMess" placeholder = "Your feedback" required></textarea></div>
+      <div class = "feedHead">
+        <div class = "divButton">
+          <input class = "sendButton" type = "submit" value = "Send">
+        </div>
+        <div class = "divButton">
+          <input class = "sendButton" type = "reset" value = "Cancel" onclick = "fadeOut()">
+        </div>
+      </div>
+    </form>
+  </div>
+ </div>
+</body>
+  <script type="text/javascript" src="jscode.js"></script>
+</html>

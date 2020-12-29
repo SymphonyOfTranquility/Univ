@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab3</title>
+	<style>
+		.allBorder
+		{
+			margin: 0 auto;
+		        width: 1200px;
+		        padding: 20px;
+		        display: flex;
+			background: silver;
+		}
+		.rectangle1
+		{
+			width: 0;
+			height: 0;
+			border-right: 30px solid aqua;
+			border-left: 30px solid green;
+			border-top: 30px solid lightgreen;
+			border-bottom: 30px solid lightseagreen;
+        		margin: 20px;
+			margin-left: 20%;
+		}
+
+
+		.triangle1
+		{
+			width: 0;
+			height: 0;
+			border-right: 45px solid orange;
+			border-left: 0px solid transparent;
+			border-top: 30px solid transparent;
+			border-bottom: 30px solid transparent;
+        		margin: 20px;
+		}
+
+		.arrow_top
+   		{
+  			margin: 20px;
+			margin-top:40px;
+	        	background: red;
+		        position: relative;
+		        width: 120px;
+		        height: 30px;
+		        float: left;
+		}
+		
+		.arrow_top:after
+		{	
+			content: '';
+        		position: absolute;
+		        right: -15px;
+			border-right: 0px solid transparent;
+			border-left: 15px solid red;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+		}
+		
+		.arrow_top:before
+		{
+			content: '';
+		        border-bottom: 0px solid transparent;
+		        border-left: 0px solid transparent;
+		        border-right: 30px solid rgb(119, 39, 32);
+		        border-top: 10px solid transparent;			
+		        position: absolute;
+		        top: -10px;			
+		}
+
+		.rounded_rectangle_top
+		{
+      			background: aqua;
+        		border-radius: 15px;
+		        position: relative;
+		        width: 160px;
+		        margin-top: 25px;
+		        margin-left: 40px;		
+		}
+
+		.rounded_rectangle_top:before
+		{
+			content: '';
+		        border-bottom: 15px solid aqua;
+		        border-left: 15px solid transparent;
+		        border-right: 15px solid transparent;
+		        border-top: 0px solid transparent;			
+		        position: absolute;
+		        top: -15px;
+			left: 65px;			
+		}
+
+
+		.rounded_rectangle_bot
+		{
+			background: #A0E0EC;
+      			border: 3px solid #98AFC7;
+        		border-radius: 15px;
+		        position: relative;
+		        width: 160px;
+		        margin-top: 25px;
+		        margin-left: 40px;		
+		}
+
+		.rounded_rectangle_bot:before
+		{	
+			content: '';		
+		        position: absolute;
+		        border-top: 15px solid #98AFC7;
+		        border-left: 15px solid transparent;
+		        border-right: 15px solid transparent;
+		        border-bottom: 0px solid transparent;
+			bottom: -15px;	
+			left: 65px;	
+		}		
+		
+		.rounded_rectangle_bot:after
+		{
+			content: '';		
+		        position: absolute;
+		        border-top: 12px solid #A0E0EC;
+		        border-left: 12px solid transparent;
+		        border-right: 12px solid transparent;
+		        border-bottom: 0px solid transparent;
+			bottom: -12px;	
+			left: 68px;		
+		}
+		
+		.leftMarg
+		{
+			margin-left:30%;
+		}
+
+		.rectangle_arr1,
+		.rectangle_arr2
+		{
+        		float: left;
+		        position: relative;
+		        width: 50px;
+		        height: 40px;
+		        background: red;
+		        margin-left: 47px;			
+		}
+    
+   		 .rectangle_arr1:before,
+   		 .rectangle_arr2:before
+    		{
+   			content: '';
+      			border: 25px solid transparent;
+		        border-top: 26px solid rgb(215, 109, 109);
+		        position: absolute;
+		}
+    
+		.rectangle_arr2:after
+		{
+		        border-top: 25px solid rgb(229, 154, 154);
+		}
+    
+	        .rectangle_arr1:after
+		{
+		        content: '';
+		        border: 20px solid transparent;
+		        border-top: 20px solid rgb(229, 154, 154);
+		        position: absolute;
+		        border-left: 20px solid rgb(231, 90, 4);
+		}
+    
+		.arrow_bot
+   		{
+			float: left;
+			margin-left: 60px;
+		        width: 90px;
+		        height: 40px;
+		        background: deeppink;
+		        position: relative;
+		}
+    
+		.arrow_bot:before
+		{
+		        content: '';
+		        position: absolute;
+		        left: -20px;
+		        border: 20px solid transparent;
+		        border-bottom: 20px solid deeppink;
+			border-right: 0px;
+		        border-top: 20px solid deeppink;
+		}
+
+    		.arrow_bot:after
+		{
+		        content: '';
+		        position: absolute;
+		        border: 14px solid transparent;
+		        border-top: 14px solid rgb(155, 31, 31);
+		        bottom: -28px;
+		        border-left: 5px solid transparent;
+		        right: 0;
+		}
+    
+    		.last_arrow
+   		{
+		
+		        width: 40px;
+		        height: 30px;
+		        display: block;
+		        background: #581794;
+		        float: left;
+		        margin-left: 60px;
+		        position: relative;
+		}
+    
+    		.last_arrow:before
+		{
+		        content: '';
+		        position: absolute;
+		        border-top: 30px solid darkorchid;
+		        border-left: 14px solid thistle;
+		        border-right: 14px solid #581794;
+		        left: -28px;
+		}
+    
+
+    		.last_arrow:after
+    		{
+	    		content: '';
+     			border: 15px solid transparent;
+		        border-left: 15px solid darkviolet;
+		        position: absolute;
+			top: 0;
+		        right: -30px;
+		}	
+
+	</style>
+</head>
+<body>
+	<div class = "allBorder">
+		<div class = "rectangle1"></div>
+		<div class = "triangle1"></div>
+		<div class = "arrow_top"></div>
+		<div class = "rounded_rectangle_top"></div>
+		<div class = "rounded_rectangle_bot"></div>
+	</div>    
+	<div class = "allBorder">
+		<div class = "leftMarg">
+			<div class = "rectangle_arr1"></div>
+			<div class = "rectangle_arr2"></div>
+			<div class = "arrow_bot"></div>
+			<div class = "last_arrow"></div>
+		</div>
+	</div>    
+
+</body>
+</html>

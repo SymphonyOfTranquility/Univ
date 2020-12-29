@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chess Board</title>
+
+    <style>
+      .controls {
+        margin-bottom: 10px;
+      }
+
+      #chessBoard {
+      	display: flex;
+      	flex-wrap: wrap;
+
+      }
+
+      .row {
+      }
+
+      .row:nth-of-type(2n) {
+      	flex-direction: row-reverse;
+      }
+
+      .tile {
+      	background-image: linear-gradient(to bottom right, white, gray);
+      	height: 50px;
+      	min-width: 50px;
+      }
+
+      .tile:nth-of-type(2n) {
+      	background-image: linear-gradient(gray, black);
+      }
+    </style>
+
+    <script>
+      function createChessBoard(m, n){
+        m = m || 0;
+        n = n || 0;
+
+      	var chessBoardHTML = '',
+            chessBoardElement = document.getElementById('chessBoard');
+
+        chessBoardElement.style.width = (50 * n) + 'px';
+
+      	for(var i = 0; i < m; i++) {
+      		chessBoardHTML += chessRow();
+      	}
+
+      	function chessRow(){
+      		var row = '<div class="row">';
+
+      		for(var i = 0; i < n; i++) {
+      			row += '<div class="tile"></div>';
+      		}
+
+      		row += '</div>';
+
+      		return row;
+      	}
+
+        chessBoardElement.innerHTML = chessBoardHTML;
+      }
+
+      window.addEventListener('load', function() {
+        document.getElementById('createButton')	.addEventListener('click', function() {
+            var m = document.querySelector('[name="sizeM"]').value,
+                n = document.querySelector('[name="sizeN"]').value;
+            createChessBoard(m, n);
+          })
+      });
+    </script>
+  </head>
+  <body>
+    <div class="controls">
+      <label>
+        M: <input type="number" name="sizeM" value="8" />
+      </label>
+
+      <label>
+        N: <input type="number" name="sizeN" value="8" />
+      </label>
+
+      <button type="button" id="createButton">Создать</button>
+    </div>
+
+    <div id="chessBoard"></div>
+  </body>
+</html>

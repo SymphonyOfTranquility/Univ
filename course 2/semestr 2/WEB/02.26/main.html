@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Практична №3</title>		
+		<style>
+			.specForm
+			{
+				border: 2px solid black;
+				position: absolute;
+				top:50%;
+				left: 50%;
+				margin-right:-50%;
+				transform: translate(-50%,-50%);
+				width: 25%;
+				height: 25%;
+				border-radius: 0 50px;
+				background: lightgreen;
+			}
+			.circle1
+			{
+				border: 1.5px solid black;
+				border-radius: 50%;
+				width: 10vh;
+				height: 10vh;				
+			}
+			.circle2
+			{
+				position: absolute;
+				width: 15%;
+				height: 30%;
+				border: 1.5px solid black;
+				border-radius:50%;
+				background-color:lightblue;
+			}
+			.bottomleft
+			{
+				top:75%;
+				left:5%;
+				transform:translate(0,-50%);
+			}
+			.topright
+			{
+				top:8%;
+				left:80%;
+			}
+			.figures4
+			{
+				position:absolute;				
+				top:70%;
+				height:20vh;	
+			}
+			.square1
+			{
+				background-color:lightgreen;
+				height:20vh;
+				width:20vh;
+			}
+			.square2
+			{
+				background-color:lightgreen;
+				height:20vh;
+				width:20vh
+			}
+			.triangle1
+			{
+				width: 0;
+				height: 0; 
+				border: 10vh solid transparent;
+				border-left: 10vh solid lightgreen;
+				border-bottom: 10vh solid lightgreen;
+			}	
+			.triangle2
+			{
+				width: 0;
+				height: 0; 
+				border: 10vh solid transparent;
+				border-right: 10vh solid lightgreen;
+				border-bottom: 10vh solid lightgreen;
+			}	
+			.square1:hover
+			{
+				background-color: red;
+			}
+			.square2:hover
+			{
+				background-color: yellow;
+			}
+			.triangle1:hover
+			{
+				border-left: 10vh solid violet;
+				border-bottom: 10vh solid violet;
+			}
+			.triangle2:hover
+			{
+				border-right: 10vh solid lightblue;
+				border-bottom: 10vh solid lightblue;
+			}
+			.temp:before
+			{
+				content: "$";
+			}
+			.temp:after
+			{
+				content: " #end";
+			}
+			.textclass
+			{
+				position:absolute;				
+				top:95%;
+			}
+			
+		</style>
+	</head>
+	<body>	
+		<div>Task 1</div>
+		<div class = "circle1"></div>
+		<div>Task 2</div>
+		<div class = "specForm">
+			<div class = "circle2 bottomleft"></div>
+			<div class = "circle2 topright"></div>
+		</div>
+		<div class = "figures4">
+			Task 3, 4
+			<table>
+				<tr>
+					<td><div class = "square1"></div</td>
+					<td><div class = "triangle1"></div></td>
+					<td><div class = "square2"></div></td>
+					<td><div class = "triangle2"></div></td>
+				</tr>
+			</table>
+		</div>		
+		<div class = "textclass">Task 5
+			<div class = "temp">some text</div>
+			<div class = "temp">asdfasdf</div>		
+		</div>
+	</body>
+</html>
+

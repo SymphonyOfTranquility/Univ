@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "myStyles.css">
+	<title>Practice 3</title>
+</head>
+<body>
+	<div class = "form1"></div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modul</title>
+	<style>	
+		.myMarg
+		{
+			margin-top: 1vw;
+			margin-left: 0.4vw;
+			margin-bottom: 2vw;
+		}
+		#chessBoard
+		{
+		      	display: flex;
+		      	flex-wrap: wrap;			
+		}
+		
+		.row 
+		{
+		      	display: flex;
+		}
+
+	        .tileEven
+		{
+		      	background-color: black;
+		      	height: 4vw;
+		      	width: 4vw;
+		}
+
+	        .tileEven:nth-of-type(2n) 
+		{
+		      	background-color: silver;
+		}  
+		
+		.tileOdd
+		{
+		      	background-color: silver;
+		      	height: 4vw;
+		      	width: 4vw;
+		}
+
+	        .tileOdd:nth-of-type(2n) 
+		{
+		      	background-color: black;
+		}
+		 
+	</style>
+
+	<script>
+		function createChessBoard(n, m)
+		{
+			function createRow(value)
+			{
+				var row = '<div class = "row">';
+				
+				for (var i = 0; i < m; i++)
+				{
+					if (value%2 == 0)
+						row += '<div class = "tileEven"></div>';
+					else
+						row += '<div class = "tileOdd"></div>';
+				}
+				
+				row += '</div>';
+	
+				return row;
+			}
+
+			var boardCodeHTML = '', boardElement = document.getElementById('chessBoard');
+			boardElement.style.width = (4 * m) + 'vw'; 
+			
+			for (var i = 0;i < n; i++)
+				boardCodeHTML += createRow(i);
+			
+			boardElement.innerHTML = boardCodeHTML;
+		}
+
+		window.addEventListener('load', function()
+		{
+			document.getElementById('createButton').addEventListener('click', function()
+			{
+				var n = document.querySelector('[name="sizeN"]').value;			
+				var m = document.querySelector('[name="sizeM"]').value;
+				createChessBoard(n, m);
+			});		
+		});
+	</script>
+</head>
+<body>
+	<div class = "myMarg">
+		<label for="N">N:</label>
+		<input type="number" id="inputN" name="sizeN" />	
+
+		<label for="M">M:</label>
+		<input type="number" id="inputM" name="sizeM" />
+	
+		<button type="button" id="createButton">Create</button>
+	</div>
+	<div id = "chessBoard"></div>
+</body>
+</html>

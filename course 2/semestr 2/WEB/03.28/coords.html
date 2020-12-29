@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Coords</title>
+
+  <style>
+    .controls {
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <script>
+    function getQuadrant(x, y) {
+      var quadrant;
+
+      if (x != 0 && y != 0) {
+          if (x > 0 && y > 0) {
+              quadrant = 'I';
+          } else if (x < 0 && y > 0) {
+              quadrant = 'II';
+          } else if (x < 0 && y < 0) {
+              quadrant = 'III';
+          } else if (x > 0 && y < 0) {
+            quadrant = 'IV';
+          }
+      } else {
+        console.log('Zero');
+        quadrant = 0;
+      }
+
+      return quadrant;
+    }
+
+    window.addEventListener('load', function() {
+      document
+        .getElementById('calculateButton')
+        .addEventListener('click', function() {
+          var Ax = document.querySelector('[name="Ax"]').value,
+              Ay = document.querySelector('[name="Ay"]').value,
+              Bx = document.querySelector('[name="Bx"]').value,
+              By = document.querySelector('[name="By"]').value;
+
+          var AQuadrant = getQuadrant(Ax, Ay),
+              BQuadrant = getQuadrant(Bx, By);
+
+          var resultElement = document.getElementById('result');
+
+          if (AQuadrant === 0 || BQuadrant === 0) {
+              resultElement.innerHTML = 'Одна з кординат дорівнює 0';
+          } else {
+            if (AQuadrant === BQuadrant) {
+                resultElement.innerHTML = 'Обидві точки знаходяться в ' + AQuadrant + ' чверті';
+            } else {
+                var AB = Math.sqrt(Math.pow((Bx - Ax), 2) + Math.pow((By- Ay), 2));
+
+                resultElement.innerHTML = 'Відстань між точками ' + AB;
+            }
+          }
+        })
+    });
+  </script>
+</head>
+
+<body>
+  <div class="controls">
+    <div>
+      A:
+      <label>
+        x: <input type="number" name="Ax" value="3" />
+      </label>
+
+      <label>
+        y: <input type="number" name="Ay" value="4" />
+      </label>
+    </div>
+
+    <div>
+      B:
+      <label>
+        x: <input type="number" name="Bx" value="6" />
+      </label>
+
+      <label>
+        y: <input type="number" name="By" value="7" />
+      </label>
+    </div>
+
+    <button type="button" id="calculateButton">Розрахувати</button>
+  </div>
+
+  <div id="result"></div>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style>
+        
+        #curExpression
+        {
+            width: 290px;
+            margin: 3px;
+            background-color: aqua;
+        }
+        
+        .buttonSize
+        {
+            width: 55px;
+        }
+        
+        .buttonSize2
+        {
+            width: 114px;
+        }
+        
+        #inputField
+        {
+          width: 169px;
+        }
+    </style>
+</head>
+
+<body>
+  <div class = "overAllForm">
+    <div>
+    <table width = 10vw>
+      <tr>
+        <td colspan = 3>
+           <input type = "number" value = "" id = "inputField" readonly>
+        </td>
+        <td>
+          <input type = "button" value = "C" id = "clearField" class = "buttonSize" onclick = clearField()>
+        </td>
+        <td>
+          <input type = "button" value = "CE" id = "clearAll" class = "buttonSize" onclick = clearAll()>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <input type = "button" value = "1" id = "num1" class = "buttonSize" onclick = add_digit(1)>
+        </td>
+        <td>
+          <input type="button" value = "2" id = "num2" class = "buttonSize" onclick = add_digit(2)>
+        </td>
+        <td>
+          <input type="button" value = "3" id = "num3" class = "buttonSize" onclick = add_digit(3)>
+        </td>
+        <td>
+          <input type="button" value = "+" id = "plus" class = "buttonSize" onclick = add_sign("+")>
+        </td>
+        <td>
+          <input type="button" value = "-" id = "-" class = "buttonSize" onclick = add_sign("-")>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value = "4" id = "num4" class = "buttonSize" onclick = add_digit(4)>
+        </td>
+        <td>
+          <input type="button" value = "5" id = "num5" class = "buttonSize" onclick = add_digit(5)>
+        </td>
+        <td>
+          <input type="button" value = "6" id = "num6" class = "buttonSize" onclick = add_digit(6)>
+        </td>
+        <td>
+          <input type="button" value = "*" id = "mult" class = "buttonSize" onclick = add_sign("*")>
+        </td>
+        <td>
+          <input type="button" value = "/" id = "div" class = "buttonSize" onclick = add_sign("/")>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value = "7" id = "num7" class = "buttonSize" onclick = add_digit(7)>
+        </td>
+        <td>
+          <input type="button" value = "8" id = "num8" class = "buttonSize" onclick = add_digit(8)>
+        </td>
+        <td>
+          <input type="button" value = "9" id = "num9" class = "buttonSize" onclick = add_digit(9)>
+        </td>
+        <td colspan = 2>
+          <input type="button" value = "sqrt" id = "mSqrt" class = "buttonSize2" onclick = add_sign("sqrt")>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <input type="button" value = "%" id = "div" class = "buttonSize" onclick = add_sign("%")>
+        </td>
+        <td>
+          <input type="button" value = "0" id = "num0" class = "buttonSize" onclick = add_digit(0)>
+        </td>
+        <td>
+          <input type="button" value = "^" id = "mPow" class = "buttonSize" onclick = add_sign("^")>
+        </td>
+        <td colspan = 2>
+          <input type="button" value = "=" id = "count" class = "buttonSize2" onclick = count()>
+        </td>
+      </tr>
+      </div>
+      <div id = "curExpression"></div>
+   </div>
+</body>
+
+<script>        
+  var currentAns = 0;
+  var currentOper = "";
+  var wasDigit = true;
+  var wasEnd = false;
+  var resultElement = document.getElementById('curExpression');
+  resultElement.innerHTML = "";
+       
+  function clearAll()
+  {
+    currentAns = 0;
+    currentOper = "";
+    resultElement.innerHTML = "";
+    wasEnd = false;
+    clearField();
+  }
+  
+  function clearField()
+  {
+    var field = document.getElementById('inputField'); 
+    wasDigit = false;
+    field.value = "";    
+  }
+  
+  function add_digit(x)
+  {
+    if (currentAns == "-Infinity" || currentAns == "Infinity" || currentAns == "NaN")
+    {
+      alert("Clear calculator, please");
+    }
+    else if (wasEnd)
+    {
+      alert("Input sign");
+    }
+    else{
+    var field = document.getElementById('inputField');
+    if (currentOper == "sqrt")
+    {
+      alert("Input sign, please");
+    }
+    else if (field.value == "0")
+       alert("Number can't start from zero");
+    else
+    {
+      field.value += x;
+      wasDigit = true;
+    }
+    }
+  }
+  
+  function add_sign(x)
+  {
+    if (currentAns == "-Infinity" || currentAns == "Infinity")
+    {
+      alert("Clear calculator, please");
+    }
+    else
+    {
+      var field = document.getElementById('inputField');
+      if (currentOper == "" && field.value.length == 0 || wasEnd)
+      {
+        wasDigit = false;
+        wasEnd = false;
+        if (x == "sqrt")
+        {
+          resultElement.innerHTML = currentAns + " ";    
+          if (wasEnd)    
+            alert("Sqrt can't work right now. Input another sign please");
+        }
+        else {
+          resultElement.innerHTML = currentAns + " " + x + " ";                
+          wasDigit = false;
+          field.value = "";
+          currentOper = x;
+       }
+      }
+      else
+      {
+        if (!wasDigit)
+        {
+          if (currentOper != "sqrt")
+            alert("It can't be 2 operations nearby");
+          else if (x == "sqrt")
+            alert("Input sign please");
+          else{
+            resultElement.innerHTML += x + " ";                  
+            wasDigit = false;
+            field.value = "";
+            currentOper = x;
+          }
+        }
+        else 
+        {    
+          var ans;
+          if (x == "sqrt")            
+             ans = Math.trunc(Math.sqrt(Number(field.value)));           
+          else   
+            ans = Number(field.value);
+        
+          if (ans == "0" && (currentOper == "/" || currentOper == "%"))
+          {
+             alert("We can't devide on zero");
+          }
+          else{
+          if (currentOper == "")
+            currentAns = ans;
+          else if (currentOper == "+")
+            currentAns += Number(ans);
+          else if (currentOper == "-")
+            currentAns -= Number(ans);
+          else if (currentOper == "*")
+            currentAns *= Number(ans);
+          else if (currentOper == "/")
+            currentAns = Math.trunc(Number(currentAns)/Number(ans));
+          else if (currentOper == "%")
+            currentAns %= Number(ans);
+          else 
+            currentAns = Math.pow(Number(currentAns),Number(ans));
+          
+          var tempS = "";
+            var ok = false;
+            for (var i = 0;i < resultElement.innerHTML.length; ++i)
+              if (!ok)
+              {
+                if (resultElement.innerHTML[i] == '=')
+                  ok = true;
+              }
+              else
+                tempS += resultElement.innerHTML[i];
+          if (tempS != "" || currentOper != "")
+          {
+            if (tempS == "")
+            {  
+              if (x == "sqrt") 
+                resultElement.innerHTML += x + "(" + field.value + ") = " +  currentAns + " ";
+              else 
+                resultElement.innerHTML += field.value + " = " + currentAns + " " + x + " "; 
+            }
+            else
+              if (x == "sqrt") 
+                resultElement.innerHTML = tempS + x + "(" + field.value + ") = " +  currentAns + " ";
+              else 
+                resultElement.innerHTML = tempS + field.value + " = " + currentAns + " " + x + " "; 
+          }
+          else
+          {
+              if (x == "sqrt") 
+                resultElement.innerHTML = x + "(" + field.value + ") ";
+              else 
+                resultElement.innerHTML = currentAns + " " + x + " ";         
+           
+          }
+                    
+          wasDigit = false;
+      field.value = "";
+      currentOper = x;
+          }
+        }
+      }
+
+    }
+  }
+  
+  function count()
+  {
+     var field = document.getElementById('inputField');
+     if (wasDigit)
+     {     
+       var ans = Number(field.value);
+       if (ans == "0" && (currentOper == "/" || currentOper == "%"))
+       {
+         alert("We can't devide on zero");
+       }
+       else
+       {
+         if (currentOper != "sqrt")            
+         {
+            if (currentOper == "+")
+              currentAns += Number(ans);
+            else if (currentOper == "-")
+              currentAns -= Number(ans);
+            else if (currentOper == "*")
+              currentAns *= Number(ans);
+            else if (currentOper == "/")
+              currentAns = Math.trunc(Number(currentAns)/Number(ans));
+            else if (currentOper == "%")
+              currentAns %= Number(ans);
+            else 
+              currentAns = Math.pow(Number(currentAns),Number(ans)); 
+            resultElement.innerHTML = currentAns + " ";
+         }
+         field.value = "";
+         currentOper = "";
+         wasDigit = true;
+         wasEnd = true;
+      }
+    }
+    else
+      if (!(currentOper == "" || currentOper == "sqrt"))
+        alert("Input number, please");
+  }
+  </script>
+</html>

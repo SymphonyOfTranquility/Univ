@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shapes</title>
+    <style>
+    .container
+    {
+        margin: 0 auto;
+        width: 1200px;
+        background-color: silver;
+        padding: 20px;
+        display: flex;
+    }
+    
+    .position
+    {
+        margin-left: 33%;
+    }
+    
+    .el_margin
+    {
+        margin: 20px;
+    }
+    
+    .rhombus
+    {
+        border-top: 25px solid rgb(97, 236, 130);
+        border-bottom: 25px solid rgb(114, 147, 168);
+        border-right: 25px solid aqua;
+        border-left: 25px solid green;
+        width: 0;
+        height: 0;
+        margin-left: 15%;
+    }
+    
+    .orange_right
+    {
+        border: 30px solid transparent;
+        border-right: 43px solid rgb(255, 68, 0);
+        display: block;
+        width: 0;
+        height: 0;
+    }
+    
+    .arrow-left
+    {
+        margin-top: 40px;
+        display: block;
+        background: red;
+        position: relative;
+        width: 149px;
+        height: 16px;
+        padding: 5px 10px;
+        color: white;
+        font-size: 12px;
+        float: left;
+    }
+    
+    .arrow-left:before
+    {
+        content: '';
+        border: 10px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-left: 0px solid transparent;
+        border-right: 20px solid rgb(119, 39, 32);
+        position: absolute;
+        left: 0px;
+        top: -10px;
+    }
+    
+    .arrow-left:after
+    {
+        content: '';
+        position: absolute;
+        border: 13px solid transparent;
+        border-left: 17px solid red;
+        right: -30px;
+        top: 0;
+    }
+    
+    .popup-top-corner
+    {
+        background: #9ff3e6;
+        border-radius: 15px;
+        border-top: 3px solid #9ff3e6;
+        -moz-border-radius: 8px;
+        position: relative;
+        padding: 5px;
+        width: 200px;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 3%;
+   }
+
+    .popup-top-corner:before
+    {
+        content: '';
+        border: 12px solid transparent;
+        border-bottom: 12px solid #9ff3e6;
+        position: absolute;
+        left: 50%;
+        margin-left: -12px;
+        top: -27px;
+        width: 0;
+    }
+    
+    .popup-double-corner
+    {
+        background: #a0e0ec;
+        border: 3px solid #5e94b8;
+        border-radius: 15px;
+        -moz-border-radius: 5px;
+        position: relative;
+        padding: 5px;
+        width: 200px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+   .popup-double-corner:after,
+   .popup-double-corner:before
+    {
+        content: '';
+        border: solid transparent;
+        position: absolute;
+        left: 50%;
+        margin-left: -12px;
+        bottom: -27px;
+        width: 0;
+    }
+    
+    .popup-double-corner:before
+    {
+        border-top-color: #5e94b8;
+        border-width: 12px;
+    }
+    
+    .popup-double-corner:after
+    {
+        border-top-color: #a0e0ec;
+        border-width: 16px;
+        margin-left: -16px;
+    }
+    
+    .arrow1,
+    .arrow2
+    {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 30px;
+        background: red;
+        float: left;
+        margin-left: 47px;
+    }
+    
+    .arrow1:before,
+    .arrow2:before
+    {
+        content: '';
+        border: 20px solid transparent;
+        border-top: 20px solid rgb(215, 109, 109);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .arrow1:before
+    {
+        border-top: 20px solid rgb(229, 154, 154);
+    }
+    
+    .arrow2:after
+    {
+        content: '';
+        border: 14px solid transparent;
+        border-top: 14px solid rgb(229, 154, 154);
+        position: absolute;
+        border-left: 14px solid rgb(231, 90, 4);
+    }
+    
+    .arrow3
+    {
+        float: left;
+        margin-left: 65px;
+        display: block;
+        width: 85px;
+        height: 30px;
+        background: #ff0091;
+        position: relative;
+
+    }
+    
+    .arrow3:before
+    {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 0;
+        border: 15px solid transparent;
+        border-bottom: 15px solid rgb(255, 0, 145);
+        border-right: 15px solid rgb(255, 0, 145);
+        border-top: 15px solid rgb(255, 0, 145);
+    }
+    
+    .arrow3:after
+    {
+        content: '';
+        position: absolute;
+        border: 14px solid transparent;
+        border-top: 14px solid rgb(155, 31, 31);
+        bottom: -28px;
+        border-left: 5px solid transparent;
+        right: 0;
+    }
+    
+    .arrow4
+    {
+        width: 40px;
+        height: 30px;
+        display: block;
+        background: #581794;
+        float: left;
+        margin-left: 40px;
+        position: relative;
+    }
+    
+    .arrow4:before
+    {
+        content: '';
+        position: absolute;
+        border-top: 30px solid rgb(180, 114, 240);
+        border-left: 14px solid rgb(207, 172, 239);
+        border-right: 14px solid rgb(88, 23, 148);
+        left: -28px;
+    }
+    
+    .arrow4:after
+    {
+        content: '';
+        border: 15px solid transparent;
+        border-left: 15px solid rgb(126, 55, 190);
+        position: absolute;
+        right: -29px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rhombus el_margin"></div>
+      <div class="orange_right el_margin"></div>
+      <div class="arrow-left"></div>
+      <div class="popup-top-corner"></div>
+      <div class="popup-double-corner"></div>
+    </div>
+    <div class="container">
+      <div class="position">
+        <div class="arrow2"></div>
+        <div class="arrow1"></div>
+        <div class="arrow3"></div>
+        <div class="arrow4"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

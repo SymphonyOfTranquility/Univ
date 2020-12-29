@@ -1,0 +1,134 @@
+.header
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	height:10%;
+	width:100%;
+	border-bottom:2px solid black;
+	background-color:green;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:1.2%;
+	padding-bottom:1.2%;
+	font-size:55px;
+}
+
+body
+{
+	margin:0;
+}
+
+.tableCl
+{
+	width:100%;
+	padding-top:1%;
+	padding-bottom:1%;
+	background-color:darkviolet;
+	border-bottom:2px solid black;
+	font-size:25px;
+	color:white;
+}
+
+a:link
+{
+	color:white;
+}
+
+a:hover
+{
+	color:silver;
+}
+
+a:visited
+{
+	color:yellow;
+}
+
+.middle
+{
+	position:relative;
+	top:0px;
+	left:50%;
+	width:600px;
+	text-align:left;
+	font-size:18px;
+	transform:translate(-50%,0);
+}
+
+.rColor
+{
+	color:red;
+	font-weight:bold;
+	font-style:italic;
+}
+
+.underl
+{
+	text-decoration:underline;
+}
+
+.crossLine
+{
+	text-decoration:line-through;
+}
+
+.r
+{
+	color:red;
+}
+
+.r2Color
+{
+	color:red;
+	font-style:italic;
+}
+
+
+.yColor
+{
+	background-color:yellow;
+}
+
+.bColor
+{
+	color:blue;
+	text-decoration:underline;
+	font-weight:bold
+}
+
+.resize
+{
+	font-size:23px;
+}
+
+.y2Color
+{
+	background-color:yellow;	
+	font-weight:bold;
+}
+
+.intend
+{
+	text-intend:1.5em;
+}
+
+.footer
+{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:5%;
+	width:99%;
+	border-top:2px solid black;
+	background-color:blue;
+	color:white;
+
+	text-align:right;
+	vertical-align:middle;
+	padding-top:1.2%;
+	padding-bottom:1.2%;
+	padding-right:1%;
+	font-size:25px;	
+}

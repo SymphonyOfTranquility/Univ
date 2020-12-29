@@ -1,0 +1,453 @@
+@font-face 
+{
+ font-family: "Pt Sans";
+}
+
+html, body
+{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body
+{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.block980px
+{
+  margin: 0px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 980px;
+}
+
+@media only screen and (max-width: 1000px)
+{
+  .block980px
+  {
+    width: 100%;
+  }
+  
+  .centerblock
+  {
+    width: 100%;
+  }
+}
+
+/* header styles */
+.header
+{
+  position: relative;
+  background-color: #f1f1f1;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100px;
+}
+
+.logoClass
+{
+  position: absolute;
+  display: flex;
+  top: 26px;    
+}
+
+.logoClass > .obrLogo
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+.obrLogo > .logoImg
+{
+  margin: 0px;
+  padding: 0px;
+  height: 37.5px;
+  width: 37.5px;
+}
+
+.logoClass > .logoName
+{ 
+  position: relative;
+  color: black;
+  margin: 10px;  
+  text-decoration: none;
+  font-size: 14px; 
+  text-align: center;
+}
+
+.feedBack
+{
+  position: absolute;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px; 
+  right: 0px;
+  top: 26px;
+  margin: 10px;
+}
+
+#feedbackButton
+{
+  text-decoration: none;
+  border: none;
+  padding: 5px 30px;
+  text-align: left;
+  background-color: #E0E0E0;
+  box-shadow: 0 5px 30px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#feedbackButton:hover
+{
+  box-shadow: none;
+}
+
+/* main menu styles */
+.main_menu
+{
+  position:relative;
+  background-color: #202020;
+  margin: 0px;
+}
+
+ul.navig
+{
+  margin: 0px;
+  text-align: center;
+  color:white;
+}
+
+ul.navig li
+{
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+li.li_menu > a
+{
+  padding: 20px 40px;
+}
+
+.li_menu > a:link
+{
+  color: white;
+  text-decoration: none;  
+}
+
+li.li_menu > a:visited
+{
+  color: white;
+  text-decoration: none;  
+}
+
+li.li_menu > a:hover
+{
+  background-color: #484848;
+}
+
+
+/* slider */
+.slider
+{
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+@media only screen and (max-width: 980px)
+{
+  .slider
+  {
+    display: none;
+  }
+}
+
+
+.slide1,.slide2,.slide3,.slide4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide1 
+{
+  background: url("img/walking cat.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-animation:fade 16s infinite;
+} 
+
+.slide2 
+{
+  background: url("img/cat with window.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-animation:fade2 16s infinite;
+}
+
+.slide3 
+{
+  background: url("img/lying cat.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-animation:fade3 16s infinite;
+}
+
+.slide4
+{
+  background: url("img/autumn cat.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-animation:fade4 16s infinite;
+}
+
+@keyframes fade
+{
+   0% { opacity: 1 }
+  25% { opacity: 0 }
+  50% { opacity: 0 }
+  75% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes fade2
+{  
+   0% { opacity: 0 }
+  25% { opacity: 1 }
+  50% { opacity: 0 }
+  75% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes fade3
+{
+   0% { opacity: 0 }
+  25% { opacity: 0 }
+  50% { opacity: 1 }
+  75% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes fade4
+{
+   0% { opacity: 0 }
+  25% { opacity: 0 }
+  50% { opacity: 0 }
+  75% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+
+/* content */
+.content
+{
+  display: flex;
+}
+
+.leftblock
+{
+  width: 245px;
+  height: 250px;
+  background-color: #202020;
+}
+
+ul.menu_content
+{
+  width: 245px;
+  padding: 20px 0px 0px 0px;
+  margin: 0px;
+  color: white;
+}
+
+ul.menu_content li
+{
+  display: block;
+  padding: 10px 25px;
+}
+
+.li_leftcontent:link
+{
+  color: white;
+  text-decoration: none;  
+}
+
+.li_leftcontent:visited
+{
+  color: white;
+  text-decoration: none;  
+}
+
+.li_leftcontent:hover
+{
+  background-color: #484848;
+}
+
+/* centerblock */
+
+
+.centerblock
+{
+  width: 735px;
+  margin: 0px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.block_with_cat_price
+{
+  position: relative;
+  margin-top: 22.5px;
+  margin-left: 22.5px;
+  width: 220px;
+  height: 235px;
+  background-color: #BEBEBE;
+  float: left;
+}
+
+.imgblock
+{
+  width: 190px;
+  height: 140px;
+  margin: 15px;
+  position: relative;
+}
+
+.imgblock > img
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.block_with_cat_price > .infoTextBl
+{
+  position: relative;
+  margin: 15px;
+}
+
+.block_with_cat_price > .price
+{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  color: red;
+}
+
+/*  FOOTER  */
+.footer 
+{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(100%);
+  background-color: #202020;
+  color: white;  
+}
+
+.footerUl
+{
+  margin: 20px 10px;
+  padding: 0px;
+  text-align: center;
+  color:white;
+}
+
+.footerUl li
+{
+  display: inline-block;
+}
+
+.footerMenuUl
+{
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  color:white;
+}
+
+
+.footerMenuUl li
+{
+  display: block; 
+  padding: 5px 15px;
+}
+
+li.li_footermenu > a
+{
+  padding: 5px 15px;
+}
+
+li.li_footermenu:link, li.li_footermenu a:link
+{
+  color: white;
+  text-decoration: none;  
+}
+
+li.li_footermenu > a:visited
+{
+  color: white;
+  text-decoration: none;  
+}
+
+li.li_footermenu > a:hover, li.li_footermenu:hover
+{
+  background-color: #484848;
+}
+
+/* feedback */
+
+#feedback
+{
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+} 
+
+.feedHead
+{
+  position: relative;
+  margin: 10px 15px;
+  text-align: center;
+}
+
+.feedInp
+{
+  font-size: 14px;
+  position: relative;
+  width: 220px;
+  height: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.feedInpMess
+{
+  position: relative;
+  width: 220px;
+  height: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  resize: none;
+}
+
+.divButton
+{
+  position: relative;
+  padding: 10px;
+  display: inline;
+}
+
+.sendButton
+{
+  width: 100px;
+  height: 20px;
+}

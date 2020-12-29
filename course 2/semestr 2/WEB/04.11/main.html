@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style>
+        .overAllForm
+        {
+            position: relative;
+            left: 10vw;
+            width: 75vw;
+        }
+        #giveSub
+        {
+            position: relative;
+            left: 10vw;          
+        }
+        .marg
+        {
+            margin: 0.2vw;
+        }
+        
+    </style>
+    <script>        
+        function check(x)
+        {
+          var temp = Math.trunc(x*10000);
+          if (temp%10000 != 0)
+            return false;
+          else 
+            return true;
+        }
+      
+        function countAns()
+        {
+          var amount = document.querySelector('[id = "numberOfBooks"]').value,	
+              cost = document.querySelector('[id = "costOfBooks"]').value;
+          Number(amount);
+          Number(cost);
+          if (amount <= 0)
+            alert("Кількість книжок має бути більше за 0");
+          else if (cost < 0)
+            alert("Ціна книжок має бути більше за 0");
+          else if (!check(amount))
+            alert("Кількість книжок не може бути дробовою");
+          else
+          {
+            var ans = amount*cost;
+            if (document.getElementById("deliverToPostOffice").checked)
+              ans = Number(ans) + 20;
+            else if (document.getElementById("deliverToHome").checked)
+              ans = Number(ans) + 40;
+            else 
+            {
+              alert("Виберіть спосіб доставки");      
+              return;
+            }
+            if (document.getElementById("howDeliver").checked)
+              ans = Number(ans)*1.4;
+            document.getElementById("answer").value = ans;            
+          }
+        }
+        
+        function mySubmit()
+        {   
+          var amount = document.querySelector('[id = "numberOfBooks"]').value,	
+              cost = document.querySelector('[id = "costOfBooks"]').value;
+          Number(amount);
+          Number(cost);
+          if (amount <= 0)
+            alert("Кількість книжок має бути більше за 0");
+          else if (cost < 0)
+            alert("Ціна книжок має бути більше за 0");
+          else if (!check(amount))
+            alert("Кількість книжок не може бути дробовою");
+          else
+          {
+            var nameP = document.getElementById('Name').value,
+                adress = document.getElementById('Adress').value;
+            if (nameP == '')
+              alert("Name field is empty");
+            else if (adress == '')
+              alert("Adress field is empty");
+            else {
+              var ans = amount*cost;
+              if (document.getElementById("deliverToPostOffice").checked)
+                  ans = Number(ans) + 20;
+              else if (document.getElementById("deliverToHome").checked)
+                ans = Number(ans) + 40;
+              else 
+              {
+                alert("Виберіть спосіб доставки");      
+                return;
+              }
+              if (document.getElementById("howDeliver").checked)
+                ans = Number(ans) + 50;
+              var resultElement = document.getElementById('giveSub');
+              resultElement.innerHTML = 'Ціна книги ' + cost + '<br />';
+              resultElement.innerHTML += 'Кількість книг ' + amount + '<br />';              
+              resultElement.innerHTML += 'Ім\'я замовника ' + nameP + '<br />';              
+              resultElement.innerHTML += 'Адреса замовника ' + adress + '<br />';
+              resultElement.innerHTML += 'Загальна ціна ' + ans + '<br />';             
+              
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+  <form>
+    <table class = "overAllForm" border = "black">
+      <tr><td align = "center">Замовлення на придбання товару</td></tr>
+      <tr><td>
+        <div class = "marg">
+          Назва товару<br />
+          <select class = "select_style" id = "selectorOfBooks">
+              <option value = "firstBook">Петренко Кібернетика - 10.5</option>
+              <option value = "secondBook">Іваненко Кібернетика - 20.2</option>
+              <option value = "thirdBook">Лисенко Мехмат - 90.123</option>
+          </select>
+        </div>
+      </td></tr>
+      <tr><td>
+        <div class = "marg">
+           Кількість <input type = "number" value = "1" id = "numberOfBooks">
+           Вартість замовлення <input type = "number" value = "0" id = "costOfBooks">
+        </div>
+      </td></tr>
+      <tr><td>
+        <div class = "marg">
+          Спосіб доставки замовлення<br />
+          <input type = "radio" name = "whereToDeliver" id = "deliverToPostOffice">Поштою<br />
+          <input type = "radio" name = "whereToDeliver" id = "deliverToHome">Доставка до дому<br />
+          <input type = "checkbox" id = "howDeliver">У святковій упаковці
+        </div>
+      </td></tr>
+      <tr><td align = "right">
+        <div class = "marg">
+          Загальна вартість замовлення <input type = "number" id = "answer" value="">
+          <input type="button" value = "Підрахувати" id = "countAnswer" OnClick="countAns()">
+        </div>
+      </td></tr>
+
+      <tr><td>
+        <div class = "marg">
+          Дані замовника<br />
+          Ім`я:        <input type = "text" id = "Name" value="">
+          Адреса:     <input type = "text" id = "Adress" value="">
+        </div>
+      </td></tr>
+      <tr><td align = "right">
+        <div class = "marg">
+            <input type = "reset" value = "Відновити початкові значення полів" id = "clear">
+            <input type = "button" value = "Відіслати дані" id = "submit" OnClick = "mySubmit();">
+        </div>
+      </td></tr>
+    </table>
+  </form>
+  <div id = "giveSub">
+  </div>
+  
+</body>
+</html>

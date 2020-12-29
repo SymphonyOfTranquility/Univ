@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* { margin: 0; 
+	padding: 0;
+}
+p { padding: 10px;
+}
+#left { 
+	position: absolute;
+	left: 0; 
+	top: 0; 
+	width: 35%;
+	background: #4FEBDC;
+}
+#right { 
+	position: absolute;
+	right: 0; 
+	top: 0; 
+	width: 65%;
+	background: #51C9F5;
+} 
+
+.back2{    
+	margin-top: 30px;
+	margin-left: 36px;
+	margin-right: 38px;
+}
+
+.back1{
+	margin-bottom: 20px;
+}
+
+.txt{
+	margin-left: 36px;
+}
+
+.txt2{
+	margin-left: 7px;
+	margin-right: 20px;
+}
+
+.title{
+	margin-left: 47px;
+	font-size: 125%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.title2{
+	margin-left: 17px;
+	font-size: 125%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.highlgt{
+	background: #FBF71C;
+	font-style: italic;
+}
+
+ul{
+	list-style: square;
+	margin-left: 35px;
+	margin-top: 10px;
+	line-height: 2em;
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: black; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 20px; /* Толщина линии */
+   }
+header {
+    background: black;
+    width: 100%;
+    height: 30px;
+}

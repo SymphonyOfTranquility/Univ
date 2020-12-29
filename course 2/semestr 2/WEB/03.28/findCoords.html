@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modul</title>
+	<style>	
+		.myMarg
+		{
+			margin-left: 0.4vw;
+			margin-top: 0.4vw;
+		}
+	</style>
+
+	<script>
+		function getQuadrant(x, y)
+		{
+			var value;
+			if (x > 0 && y > 0)
+				value = 'I';
+			else if (x < 0 && y > 0)
+				value = 'II';
+			else if (x < 0 && y < 0)
+				value = 'III';
+			else if (x > 0 && y < 0)
+				value = 'IV';	
+			return value;		
+		}
+
+		function check(x1, y1, x2, y2)
+		{
+			var resultElement = document.getElementById('result');
+			if (x1 === 0 || x2 === 0 || y1 === 0 || y2 === 0)
+				resultElement.innerHTML = 'Одна з координат 0';
+			else if (x1*x2 > 0 && y1*y2 > 0) 			
+			{
+		                var AB = Math.sqrt((x1 - x2)*(x1-x2) + (y1 - y2)*(y1-y2));
+				resultElement.innerHTML = 'Відстань між точками: ' + AB;												
+			}
+			else
+			{
+				resultElement.innerHTML = 'Точка А, лежить у чверті ' + getQuadrant(x1, y1) + '<br />';
+				resultElement.innerHTML += 'Точка B, лежить у чверті ' + getQuadrant(x2, y2);	
+			}
+		}
+
+		window.addEventListener('load', function()
+		{
+			document.getElementById('checkButton').addEventListener('click', function()
+			{
+				var x1 = document.querySelector('[name = "coordX1"]').value,			
+				    y1 = document.querySelector('[name = "coordY1"]').value,
+				    x2 = document.querySelector('[name = "coordX2"]').value,			
+				    y2 = document.querySelector('[name = "coordY2"]').value;
+				check(x1, y1, x2, y2);
+			});		
+		});
+	</script>
+</head>
+<body>
+	<div class = "myMarg">
+		A:
+		<label for="N">x1:</label>
+		<input type="number" name="coordX1" />	
+
+		<label for="M">y1:</label>
+		<input type="number" name="coordY1" />	
+	
+	</div>
+	<div class = "myMarg">
+		B: 
+		<label for="N">x2:</label>
+		<input type="number" name="coordX2" />	
+
+		<label for="M">y2:</label>
+		<input type="number" name="coordY2" />	
+	
+	</div>
+	<div class = "myMarg">	
+		<button type="button" id="checkButton">Check</button>
+	</div>
+	<div id = "result"></div>
+	
+</body>
+</html>

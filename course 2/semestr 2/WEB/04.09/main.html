@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main</title>
+	<script>	
+    function check(a)
+    {
+			var x = Math.trunc(a); 
+			var y = Math.trunc((a-x)*100);
+			if (y == 0)
+        return true;
+      else 
+        return false;
+    }
+    
+    function check2(a)
+    {
+      if (a < 0)
+        return false;
+      else
+        return true;
+    }
+    
+		function getAnswer(num, cost)
+		{
+			var resultElement = document.getElementById('result');
+			if (check(num)){
+         if (check2(num) && check2(cost)){
+         		var res = num*cost;
+            var x = Math.trunc(res); 
+            var y = Math.trunc((res-x)*100);
+            resultElement.innerHTML = x; 
+            if (x % 10 == 1)
+                resultElement.innerHTML += ' гривня ';
+            else if (x % 10 == 2 || x % 10 == 3 || x % 10 == 4)
+                resultElement.innerHTML += ' гривні ';
+            else 
+                resultElement.innerHTML += ' гривень ';   
+                 
+                 
+            resultElement.innerHTML += y; 
+            if (y % 10 == 1)
+                resultElement.innerHTML += ' копійка ';
+            else if (y % 10 == 2 || y % 10 == 3 || y % 10 == 4)
+                resultElement.innerHTML += ' копійки ';
+            else 
+                resultElement.innerHTML += ' копійок ';    
+         }
+         else
+         {
+            if (!check2(num))
+                resultElement.innerHTML = 'Від\'ємна кількість елементів';
+            else          
+                resultElement.innerHTML = 'Від\'ємна ціна';     
+         }
+      }  
+      else{
+            resultElement.innerHTML = 'Не ціла кількість елементів';             
+      }
+      	
+		}
+
+		window.addEventListener('load', function()
+		{
+			document.getElementById('ansButton').addEventListener('click', function()
+			{
+				var num = document.querySelector('[name = "numberOfEl"]').value,	
+				    cost = document.querySelector('[name = "Cost"]').value;
+				getAnswer(num, cost);
+			});					
+		});
+		
+    function makeRed()
+    {
+        for (i in document.getElementsByTagName('p'))
+          document.getElementsByTagName('p')[i].style.backgroundColor = 'red';
+    }
+    
+    function deleteChild()
+    {
+          var p = document.getElementById('p1');
+          p.parentNode.removeChild(p);
+    }
+    
+    function makeNewText()
+    {
+          var d = document.getElementById('pLast');
+          for (var i = 1;i <=  3; ++i)
+          {
+              var p = document.createElement('p');
+              p.innerHTML = "Текст " + i;
+              d.appendChild(p);
+          }
+          var a = document.createElement('a');
+          a.href = '#';
+          a.innerHTML = 'гіперпосилання';
+          d.insertBefore(a,p);
+    }
+	</script>
+</head>
+<body onload = "makeNewText()">
+	<div>
+		<label for="N">Number of elements:</label>
+		<input type="number" id="numberOfEl" name="numberOfEl" />	
+		
+		<label for="M">Cost:</label>
+		<input type="number" id="cost" name="Cost" />
+	
+		<button type="button" id="ansButton">Answer</button>
+		<div id = "result"></div>
+		<br />
+		<br />
+		<!--make red-->		
+		<button type="button" id="makeRedButton" onclick = "makeRed()">Make red background</button>
+		<p>Арифметические операции принимают в качестве операндов числовые значения (это может быть и литерал и переменная)</p>
+		<p>и возвращают результат в виде одного числового значения. Стандартными арифметическими операциями являются сложение (+), вычитание (-), умножение (*) и деление (/).</p>
+
+		<br />
+		<br />
+		<!--make delete-->	
+		<button type="button" id="deleteButton" onclick = "deleteChild()">Delete child</button>
+		<p id = "p1">Арифметические операции принимают в качестве операндов числовые значения (это может быть и литерал и переменная)</p>
+		<p id = "pLast">и возвращают результат в виде одного числового значения. Стандартными арифметическими операциями являются сложение (+), вычитание (-), умножение (*) и деление (/).</p>
+		
+	</div>
+</body>
+</html>
